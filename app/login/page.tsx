@@ -14,14 +14,12 @@ const FIREBASE_API_KEY = process.env.NEXT_PUBLIC_FIREBASE_API_KEY!;
 export default function LoginPage() {
   const router = useRouter();
 
-  const [email, setEmail] = useState("ivonne.negrete@comnet.mx");
-  const [password, setPassword] = useState("contraAPI");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  // ✅ mostrar/ocultar contraseña
   const [showPassword, setShowPassword] = useState(false);
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
