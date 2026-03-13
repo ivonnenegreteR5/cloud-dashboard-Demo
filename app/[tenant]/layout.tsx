@@ -2,14 +2,14 @@
 import type { ReactNode } from "react";
 import { TenantProvider } from "@/components/tenant-context";
 
-export default function TenantLayout({
+export default async function TenantLayout({
   children,
   params,
 }: {
   children: ReactNode;
-  params: { tenant: string };
+  params: Promise<{ tenant: string }>;
 }) {
-  const { tenant } = params; // ej. /hach → tenant = "hach"
+  const { tenant } = await params;
 
   return (
     <TenantProvider tenantId={tenant}>
