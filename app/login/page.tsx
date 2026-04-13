@@ -226,9 +226,11 @@ const [password, setPassword] = useState("");
     <div className="relative z-10 w-full flex flex-col items-center px-4">
 
       {/* 🔥 TÍTULO */}
-      <h1 className="text-6xl font-extrabold mb-8 tracking-widest text-white">
-        IDAPP
-      </h1>
+     <img
+  src="/IDApp.png"
+  alt="IDAPP"
+  className="mb-8 w-56 h-auto object-contain"
+/>
 
       {/* 🔥 LOGIN */}
       <Card className="w-full max-w-md shadow-2xl bg-white/90 backdrop-blur-md">
